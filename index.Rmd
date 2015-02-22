@@ -1,0 +1,71 @@
+---
+title       : Course Project Application
+subtitle    : Visualizing mtcars Variable Relationships
+author      : dmz2000
+job         : Coursera Learner
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Overview of Application
+
+The Developing Data Products course project application can be accessed at:
+
+https://dmz2000.shinyapps.io/CDPProj/
+
+Getting started documentation is available on the page.
+
+The application:
+
+1. Was developed using the Shiny library as taught in lectures
+2. Aims to facilitate exploration of relationship between data variables
+3. Allows application users to visualize data without requiring knowledge of R  
+
+--- 
+
+## The mtcars Dataset
+
+The dataset being explored is mtcars data from the datasets library. The mtcars dataset inspects fuel consumption (in miles per gallon) based on different aspects of car design features. 
+
+Users with R can perform exploration of the data with the commands below, to get an understanding of the data structure:
+```{r}
+library(datasets); data(mtcars)
+head(mtcars)
+```
+
+--- 
+
+## What the Application Does
+
+Application users can select one aspect of car design from the drop down menu and see its relationship to fuel consumption, similar to the below.
+
+For example, if selected variable from dropdown is "Horsepower":
+
+```{r, echo=FALSE}
+par(mar=c(13,5,1.5,5))
+plot(mtcars$hp, mtcars$mpg, main = "Plot of MPG vs Horsepower",         
+         pch=16,
+         col = "blue")    
+```
+
+--- 
+
+## Like the Application?
+
+Try it out from the link on slide 2. 
+
+Think it's pretty cool? 
+
+If you like what the application does, and/or the ability of my cool slides that contain embedded R codes and generated graphs. Learn more about:
+
+- the shiny library
+- the slidify library
+- and other data science topics
+
+from the Johns Hopkin University data science specialization on Coursera!
+
+
